@@ -21,6 +21,7 @@ export const useLocalStorage=(keyname,defualtValue)=>{
         try {
             window.localStorage.setItem(keyname,JSON.stringify(newValue))
         } catch (err) {}
+        setStoredValue(newValue)
     }
 
 

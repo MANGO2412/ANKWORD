@@ -143,7 +143,55 @@
   align-self: stretch !important;
 }
 
+/* style menu */
 
+.menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 4px 45px 0px rgba(20,30,97,0.46);
+  padding: 10px;
+}
+
+
+.menu__subcontener{
+  position: absolute;
+  box-shadow: 0px 4px 45px 0px rgba(20,30,97,0.46);
+  right: 20px;
+  width: 6rem;
+  padding: 10px;
+  background-color: #EEEEEE;
+}
+.menu__subcontener.disabled{
+  display: none;
+}
+
+.menu__sublist{
+    list-style: none;
+}
+
+.menu__item--sub{
+  border-bottom: 1px solid #787A91;
+  color: #787A91;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.menu__item{
+  display: inline-block;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+
+.menu__icon{
+  width: 3rem;
+  height: auto;
+  cursor: pointer;
+}
+.searchword__img:hover,.game__opt:hover,.menu__icon:hover,.menu__item--sub:hover{
+  opacity: .5;
+}
 
 .header{
   color: #0F044C;
@@ -160,7 +208,7 @@
 
 .main_description{
   color: #0F044C;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
   text-align: center;
   padding: 3% 0;
@@ -174,7 +222,6 @@
   flex-direction: column;
   border-radius: 5%;
   box-shadow: 0px 4px 45px 0px rgba(20,30,97,0.46);
-
 }
 
 .inputForm{
@@ -191,30 +238,27 @@
 
 
 .btn{
-  height: 77px;
-  margin-top: 20px;
-  font-size: 29px;
+  height: 40px;
+  font-size: 20px;
 }
 
 .btn--small{
-  height: 40px;
+  height: 20px;
   width: auto;
-  margin-top: 20px;
-  font-size: 20px;
+  font-size: 10px;
 }
 
 /* style  form login */
 .formStyle--login{
-  width:120vw;
+  width:180vw;
   margin-right: 60px;
-  padding: 25px;
+  padding: 20px;
 }
 
 .inputForm--login{
-  margin-top: 10px;
-  margin-bottom: 40px;
-  height: 77px;
-  font-size: 29px;
+  margin-top: 30px;
+  height: 40px;
+  font-size: 30px;
 }
 
 .btn--signUp{
@@ -227,17 +271,17 @@
   color: #EEEEEE;
 }
 
-.btn--signIn:hover,.btn--signUp:hover{
+.btn--signIn:hover,.btn--signUp:hover,.button__dark:hover{
   opacity: 0.6;
 }
 
 /* style form sign in  */
 .formStyle--singnIn{
-  padding: 30px;
+  padding: 20px;
 }
 
 .inputForm--signIn{
-  height: 50px;
+  height: 40px;
   margin-bottom: 30px;
   font-size: 20px;
   background: none;
@@ -248,6 +292,7 @@
 /* modal style */
 .modal{
  position: fixed;
+ overflow: auto;
  height: 100vh;
  left: 0;
  top: 0;
@@ -258,8 +303,8 @@
 
 .modal--card{
   position: relative;
-  width: 800px;
-  margin:  50px auto;
+  width: 700px;
+  margin:  2px auto;
 }
 
 .modal--content{
@@ -294,6 +339,142 @@
   padding: 1rem;
   position: relative;
 }
+
+
+/* style view  home*/
+.searchword{
+  margin:80px auto;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+.searchresult{
+  width: 55%;
+  margin: 0 auto;
+  font: 100 20px 'Ubuntu', sans-serif;
+  color: #0F044C;
+  line-height: 1.35em;
+}
+
+.searchdefinitions{
+  list-style: none;
+  text-align: center;
+}
+
+.searchBoxItems{
+  border: 1px solid #787A91;
+  margin:10px 0;
+}
+.searchitems{
+  display: block;
+  padding: 10px;
+  color: #0F044C;  
+}
+
+.searchword__input{
+  width: 60%;
+  height: 70px;
+  font: 300 28px 'Ubuntu', sans-serif;
+  background: none;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid  #0F044C;
+  color: #787A91;
+}
+.searchword__img{
+   height: auto;
+   width: 60%;
+   cursor: pointer;   
+}
+
+
+/* style view game */
+.game{
+  margin:80px auto;
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 30px;
+}
+
+.game__opt{
+  cursor: pointer;
+  padding: 20% 40%;   
+  box-shadow: 4px -5px 39px 0px rgba(20,30,97,0.46);
+}
+
+/*glossary  */
+.glossary{
+  width: 80%;
+  margin: auto;
+  height: 100vh;
+  box-shadow: 0px 4px 45px 0px rgba(20,30,97,0.46);
+  overflow: auto;
+}
+
+/* style button*/
+.button{
+  height: 3rem;
+  width: 6rem;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Roboto',sans-serif;
+  font-weight: 600;
+  text-align: center;
+  transition: background 0.2s; 
+}
+
+
+.button__dark{
+  background-color:  #0F044C;
+  color: #989aa9;
+  cursor: pointer;
+  border-color: #989aa9;
+}
+
+
+/*spinner */
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80%;
+  height: 80%;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 
 
 
