@@ -58,7 +58,7 @@ export default function Login(){
           <Modal show={showModalForm}>
              <Modal.Header>sign Up</Modal.Header>
              <Modal.Body>
-                <form className="formStyle formStyle--singnIn"  style={{background:"none",boxShadow:'none'}}>
+                <form className="formStyle formStyle--singnIn">
                      <div className='d-flex justify-content-center'>
                        <input name='firstname' type='text'  style={{marginLeft:"10px"}} className='inputForm inputForm--signIn'  placeholder='First Name' onChange={handleInsertInput} />
                        <input name='lastname' type='text' style={{marginLeft:"10px"}} className='inputForm inputForm--signIn'  placeholder='Last Name' onChange={handleInsertInput}/>

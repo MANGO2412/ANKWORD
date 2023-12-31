@@ -1,16 +1,20 @@
-export default function  Spinner({show,hiddenText}){
-    if(show){
-        return(
-            <div class="lds-ring">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        )
-    }
+import React from 'react';
 
-    return(
-        <>{hiddenText}</>
-    )   
+const  Spinner=()=>{
+     return(
+        <div className='spinner-container'>
+          <div className='loading-spinner'></div>
+        </div>
+     )
 }
+
+Spinner.small=()=>{
+   return(
+      <div className='spinner-container'>
+        <div className='loading-spinner loading-spinner--small'></div>
+      </div>
+   )
+}
+
+export default Spinner;
+

@@ -9,10 +9,12 @@ export default function Nav(){
     return(
         <nav className="menu">
             <h1 className="header">ANKWORD</h1>
+             {/* add the icon menu  */}
             <ul className="menu__list">
-                <li className="menu__item"><a href="/home"><img className="menu__icon"  src="/img/diccionario.png" alt="" /></a></li>
-                <li className="menu__item"><a href="/game"><img className="menu__icon" src="/img/block.png"/></a></li>
-                <li className="menu__item"><a href="/glossary"><img className="menu__icon" src="/img/list.png"/></a></li>
+                <li className="menu__close"><img className="menu__icon" src='/img/cerrar.png'/></li>
+                <li className="menu__item"><a href="/home"><img className="menu__icon"  src="/img/diccionario.png" alt="" /></a> <span className="menu__text">Inicio</span></li>
+                <li className="menu__item"><a href="/game"><img className="menu__icon" src="/img/block.png"/></a> <span className="menu__text">Seccion de estudio</span></li>
+                <li className="menu__item"><a href="/glossary"><img className="menu__icon" src="/img/list.png"/></a> <span className="menu__text">Lista de palabras</span> </li>
             </ul>
             <div>
                 <img  className="menu__icon"  src="/img/usuario.png" alt="" onClick={()=>{showSubList()}}/>
