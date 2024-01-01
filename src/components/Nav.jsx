@@ -1,20 +1,27 @@
 import { useAuth } from "../auth/useAuth";
+import {useState} from 'react'
 export default function Nav(){
     const {logout}=useAuth();
-
+    const [showMenu,setShowMenu]=useState(false)
 
     const showSubList=()=>{
      document.getElementById("contener").classList.toggle('disabled')
     }
+    
+    const switchOpen=()=>setShowMenu(!showMenu);
+
     return(
         <nav className="menu">
+             <div className="menu__hamburguer">
+               <img className="menu__icon" onClick={switchOpen} src="/img/menu.png" alt="este es el icon del menu"/>
+            </div>
             <h1 className="header">ANKWORD</h1>
              {/* add the icon menu  */}
-            <ul className="menu__list">
-                <li className="menu__close"><img className="menu__icon" src='/img/cerrar.png'/></li>
-                <li className="menu__item"><a href="/home"><img className="menu__icon"  src="/img/diccionario.png" alt="" /></a> <span className="menu__text">Inicio</span></li>
-                <li className="menu__item"><a href="/game"><img className="menu__icon" src="/img/block.png"/></a> <span className="menu__text">Seccion de estudio</span></li>
-                <li className="menu__item"><a href="/glossary"><img className="menu__icon" src="/img/list.png"/></a> <span className="menu__text">Lista de palabras</span> </li>
+            <ul className={showMenu?"menu__list open":"menu__list"}>
+                <li className="menu__close"><img className="menu__icon" onClick={switchOpen} src='/img/cerrar.png'/></li>
+                <li className="menu__item"><a href="/home"><img className="menu__icon"  src="/img/diccionario.png" alt="" />  <span className="menu__text">Inicio</span></a></li>
+                <li className="menu__item"><a href="/game"><img className="menu__icon" src="/img/block.png"/> <span className="menu__text">Seccion de estudio</span></a></li>
+                <li className="menu__item"><a href="/glossary"><img className="menu__icon" src="/img/list.png"/>  <span className="menu__text">Lista de palabras</span></a></li>
             </ul>
             <div>
                 <img  className="menu__icon"  src="/img/usuario.png" alt="" onClick={()=>{showSubList()}}/>

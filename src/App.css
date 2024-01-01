@@ -153,6 +153,9 @@
   padding: 10px;
 }
 
+.menu__hamburguer{
+  display: none;
+}
 
 .menu__subcontener{
   position: absolute;
@@ -312,8 +315,8 @@
 
 .modal--card{
   position: relative;
-  width: 700px;
-  margin:  2px auto;
+  width: 50vw;
+  margin:auto;
 }
 
 .modal--content{
@@ -708,6 +711,12 @@ OTHER  COMMON STYLES
      height: 100vh;
      width: 70%;
      background-color: rgba(0, 0, 0, 0.761);
+     transform: translateX(-400px);
+     transition: transform  1s ease-out;
+  }
+
+  .menu__list.open{
+     transform: translateX(0);
   }
 
   .menu__item{
@@ -725,5 +734,30 @@ OTHER  COMMON STYLES
     display: inline-block;
     text-align: end;
     padding: 10px;
+  }
+
+  .menu__hamburguer{
+    display: inline-block;
+  }
+}
+
+/* login view */
+@media screen and  (min-width: 100px) and (max-width: 600px){
+  .main_div{
+    flex-direction: column;
+    padding: 10px;
+    margin: auto 10px;
+  }
+
+  .main_description{
+    margin: 0;
+  }
+
+  .formStyle{
+    box-shadow: 0px 4px 17px 0px rgba(20,30,97,0.46);
+  }
+  .formStyle--login{
+     width: 80%;
+     margin: 10px auto;
   }
 }
