@@ -20,9 +20,9 @@ export default function Nav(){
              {/* add the icon menu  */}
             <ul className={showMenu?"menu__list open":"menu__list"}>
                 <li className="menu__close"><img className="menu__icon" onClick={switchOpen} src='/img/cerrar.png'/></li>
-                <li className="menu__item"> <Link to="Home"><img className="menu__icon"  src="/img/diccionario.png" alt="" />  <span className="menu__text">Inicio</span></Link> </li>
-                <li className="menu__item"><Link to="Game"><img className="menu__icon" src="/img/block.png"/> <span className="menu__text">Seccion de estudio</span></Link></li>
-                <li className="menu__item"><Link to="Glossary"><img className="menu__icon" src="/img/list.png"/>  <span className="menu__text">Lista de palabras</span></Link></li>
+                <li className="menu__item"> <a href="home"><img className="menu__icon"  src="/img/diccionario.png" alt="" />  <span className="menu__text">Inicio</span></a> </li>
+                <li className="menu__item">  <a href="game"><img className="menu__icon" src="/img/block.png"/> <span className="menu__text">Seccion de estudio</span></a></li>
+                <li className="menu__item"> <a href="glossary"><img className="menu__icon" src="/img/list.png"/>  <span className="menu__text">Lista de palabras</span></a></li>
             </ul>
             <div>
                 <img  className="menu__icon"  src="/img/usuario.png" alt="" onClick={()=>{showSubList()}}/>

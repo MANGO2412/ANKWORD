@@ -193,6 +193,9 @@
   margin-right: 40px;
 }
 
+li.menu__item a {
+  text-decoration: none;
+}
 
 .menu__icon{
   width: 3rem;
@@ -425,7 +428,8 @@
 
 .game__opt{
   cursor: pointer;
-  padding: 20% 40%;   
+  padding: 20% 40%;
+  color: #0F044C;   
   box-shadow: 4px -5px 39px 0px rgba(20,30,97,0.46);
 }
 
@@ -687,10 +691,11 @@ OTHER  COMMON STYLES
 */
 .CUR{
   cursor: pointer;
+  color: #0F044C;
 }
 
 .CUR:hover{
-  color: #0F044C;
+  color: #787A91;
   text-decoration:underline
 }
 

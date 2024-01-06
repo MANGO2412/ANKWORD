@@ -35,7 +35,7 @@ export const Rutas=createBrowserRouter(
              <Route path='perfil' element={<Perfil/>}/>
         </Route>
         {/* handler error 404 routes */}
-        <Route path='*' element={<ErrorBoundary/>}/>
+        <Route path='/*' element={<ErrorBoundary/>}/>
     </Route>
   )
 );
