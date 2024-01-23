@@ -55,23 +55,19 @@ export default function Login(){
      return(
         <div>
           {/* modal */}
-          <Modal show={showModalForm}>
-             <Modal.Header>sign Up</Modal.Header>
-             <Modal.Body>
-                <form className="formStyle formStyle--singnIn">
-                     <div className='d-flex justify-content-center'>
-                       <input name='firstname' type='text'  style={{marginLeft:"10px"}} className='inputForm inputForm--signIn'  placeholder='First Name' onChange={handleInsertInput} />
-                       <input name='lastname' type='text' style={{marginLeft:"10px"}} className='inputForm inputForm--signIn'  placeholder='Last Name' onChange={handleInsertInput}/>
-                       <input name='age' type='number' style={{marginLeft:"10px"}} className='inputForm inputForm--signIn'  min={1} placeholder='Age' onChange={handleInsertInput}/>
-                     </div>
-                     <input name='username' type='text'  className='inputForm inputForm--signIn'  placeholder='username' onChange={handleInsertInput}/>
-                     <input name='phone'    type='text'  className='inputForm inputForm--signIn'  placeholder='phone' onChange={handleInsertInput}/>
-                     <input name='email' type='text'  className='inputForm inputForm--signIn'  placeholder='Email' onChange={handleInsertInput}/>
-                     <input name='password' type='password' className='inputForm inputForm--signIn'  placeholder='Password' onChange={handleInsertInput}/>
-                     <input type="button" className='btn btn--signUp' value="Send"  onClick={insertUser}/>
-                     <input type="button" className='btn btn--signIn' value="cancel" onClick={()=>handleModalForm()}/>
+          <Modal show={showModalForm} change={handleModalForm}>
+            <Modal.Header change={handleModalForm}>signUp</Modal.Header>
+            <Modal.Body>
+                <form className='formStyle formStyle--singnIn'>
+                    <input type='text' className='inputForm--signIn'  placeholder='firstname' name='firstname'/>
+                    <input type='text' className='inputForm--signIn'  placeholder='lastname' name='lastname'/>
+                    <input type='text' className='inputForm--signIn'  placeholder='username' name='username'/>
+                    <input type='number' className='inputForm--signIn' placeholder='age' name='age' min={1} max={100}/>
+                    <input type='email' className='inputForm--signIn' placeholder='email' name='email' />
+                    <input className="btn btn--signUp" onClick={()=>{}}      style={{marginTop:"50px"}} type="button" value="Aceptar"/>
+                    <input className="btn btn--signIn" onClick={()=>handleModalForm()}  type="button" value="Cancel"/>
                 </form>
-             </Modal.Body>
+            </Modal.Body>
           </Modal>
 
           <h1 className="header header--center">ANKWORD</h1>
